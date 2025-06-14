@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstroVision</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to AstroVision</h1>
+  <p>Select your zodiac sign to see your horoscope:</p>
+
+<div id="zodiac-container">
+  <button onclick="showHoroscope('Aries')">♈ Aries</button>
+  <button onclick="showHoroscope('Taurus')">♉ Taurus</button>
+  <button onclick="showHoroscope('Gemini')">♊ Gemini</button>
+  <button onclick="showHoroscope('Cancer')">♋ Cancer</button>
+  <button onclick="showHoroscope('Leo')">♌ Leo</button>
+  <button onclick="showHoroscope('Virgo')">♍ Virgo</button>
+  <button onclick="showHoroscope('Libra')">♎ Libra</button>
+  <button onclick="showHoroscope('Scorpio')">♏ Scorpio</button>
+  <button onclick="showHoroscope('Sagittarius')">♐ Sagittarius</button>
+  <button onclick="showHoroscope('Capricorn')">♑ Capricorn</button>
+  <button onclick="showHoroscope('Aquarius')">♒ Aquarius</button>
+  <button onclick="showHoroscope('Pisces')">♓ Pisces</button>
+</div>
+
+<div id="horoscope-output" style="margin-top: 20px; font-size: 18px;"></div>
+
+  <script src="script.js"></script>
+<hr>
+<h2>Birth Chart Calculator</h2>
+<form id="birth-form">
+  <input type="text" id="name" placeholder="Your Name" required><br>
+  <input type="date" id="birth-date" required><br>
+  <input type="time" id="birth-time" required><br>
+  <input type="text" id="birth-place" placeholder="Place of Birth" required><br>
+  <button type="submit">Generate Chart</button>
+</form>
+<hr>
+<h2>Zodiac Compatibility Checker</h2>
+<form id="compatibility-form">
+  <select id="sign1" required>
+    <option value="">Select Your Sign</option>
+    <option>Aries</option>
+    <option>Taurus</option>
+    <option>Gemini</option>
+    <option>Cancer</option>
+    <option>Leo</option>
+    <option>Virgo</option>
+    <option>Libra</option>
+    <option>Scorpio</option>
+    <option>Sagittarius</option>
+    <option>Capricorn</option>
+    <option>Aquarius</option>
+    <option>Pisces</option>
+  </select>
+
+  <select id="sign2" required>
+    <option value="">Select Partner's Sign</option>
+    <option>Aries</option>
+    <option>Taurus</option>
+    <option>Gemini</option>
+    <option>Cancer</option>
+    <option>Leo</option>
+    <option>Virgo</option>
+    <option>Libra</option>
+    <option>Scorpio</option>
+    <option>Sagittarius</option>
+    <option>Capricorn</option>
+    <option>Aquarius</option>
+    <option>Pisces</option>
+  </select><br>
+
+  <button type="submit">Check Compatibility</button>
+</form>
+
+<div id="compatibility-result" style="margin-top: 15px; font-size: 18px;"></div>
+<hr>
+<h2>Contact / Book a Reading</h2>
+<form id="contact-form">
+  <input type="text" id="contact-name" placeholder="Your Name" required><br>
+  <input type="email" id="contact-email" placeholder="Your Email" required><br>
+  <textarea id="contact-message" placeholder="Your Message or Booking Details" rows="5" required></textarea><br>
+  <button type="submit">Send Message</button>
+</form>
+
+<div id="contact-result" style="margin-top: 15px; font-size: 18px;"></div>
+
+<div id="chart-result" style="margin-top: 15px; font-size: 18px;"></div>
+<hr>
+<footer>
+  <p>&copy; 2025 AstroVision. All rights reserved.</p>
+</footer>
+</body>
+</html>
