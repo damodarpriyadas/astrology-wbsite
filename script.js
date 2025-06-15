@@ -1,24 +1,27 @@
 console.log("AstroVision is ready!");
 alert("Welcome to AstroVision 🌟");
 function showHoroscope(sign) {
-  const messages = {
-    Aries: "Today is a great day to start something new, Aries!",
-    Taurus: "Focus on stability and comfort today, Taurus.",
-    Gemini: "Communication is your superpower today, Gemini.",
-    Cancer: "Spend quality time with loved ones, Cancer.",
-    Leo: "You’re glowing with confidence today, Leo!",
-    Virgo: "Perfect day to organize and plan, Virgo.",
-    Libra: "Seek balance and harmony, Libra.",
-    Scorpio: "Trust your intuition today, Scorpio.",
-    Sagittarius: "Adventure awaits you, Sagittarius!",
-    Capricorn: "Work hard and rewards will follow, Capricorn.",
-    Aquarius: "Think outside the box today, Aquarius.",
-    Pisces: "Creativity flows through you, Pisces."
-  };
-
-  const message = messages[sign] || "No horoscope found.";
-  document.getElementById("horoscope-output").innerText = `${sign}: ${message}`;
+  fetch(`https://corsproxy.io/?https://aztro.sameerkumar.website/?sign=${sign}&day=today`, {
+    method: 'POST'
+  })
+  .then(response => response.json())
+  .then(data => {
+    const output = `
+      <strong>${sign} - ${data.current_date}</strong><br>
+      ${data.description}<br><br>
+      Mood: ${data.mood}<br>
+      Lucky Number: ${data.lucky_number}<br>
+      Compatibility: ${data.compatibility}<br>
+      Color: ${data.color}
+    `;
+    document.getElementById("horoscope-output").innerHTML = output;
+  })
+  .catch(error => {
+    document.getElementById("horoscope-output").innerText = "Something went wrong. Please try again.";
+    console.error("Error fetching horoscope:", error);
+  });
 }
+
 document.getElementById("birth-form").addEventListener("submit", function(e) {
   e.preventDefault();
   
