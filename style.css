@@ -72,3 +72,21 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
+#horoscope-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f3f0ff;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#horoscope-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
