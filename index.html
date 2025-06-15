@@ -78,10 +78,12 @@
 <div id="compatibility-result" style="margin-top: 15px; font-size: 18px;"></div>
 <hr>
 <h2>Contact / Book a Reading</h2>
-<form id="contact-form">
-  <input type="text" id="contact-name" placeholder="Your Name" required><br>
+<form action="https://formsubmit.co/jyotishaashraya@gmail.com" method="POST">
+
+  <input type="text" name="name" placeholder="Your Name" required><br>
   <input type="email" id="contact-email" placeholder="Your Email" required><br>
   <textarea id="contact-message" placeholder="Your Message or Booking Details" rows="5" required></textarea><br>
+  <input type="hidden" name="_next" value="https://damodarpriyadas.github.io/astrology-wbsite/thank-you.html">
   <button type="submit">Send Message</button>
 </form>
 
