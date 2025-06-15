@@ -8,22 +8,17 @@
 </head>
 <body>
   <h1>Welcome to AstroVision</h1>
-  <p>Select your zodiac sign to see your horoscope:</p>
-
-<div id="zodiac-container">
-  <button onclick="showHoroscope('Aries')">♈ Aries</button>
-  <button onclick="showHoroscope('Taurus')">♉ Taurus</button>
-  <button onclick="showHoroscope('Gemini')">♊ Gemini</button>
-  <button onclick="showHoroscope('Cancer')">♋ Cancer</button>
-  <button onclick="showHoroscope('Leo')">♌ Leo</button>
-  <button onclick="showHoroscope('Virgo')">♍ Virgo</button>
-  <button onclick="showHoroscope('Libra')">♎ Libra</button>
-  <button onclick="showHoroscope('Scorpio')">♏ Scorpio</button>
-  <button onclick="showHoroscope('Sagittarius')">♐ Sagittarius</button>
-  <button onclick="showHoroscope('Capricorn')">♑ Capricorn</button>
-  <button onclick="showHoroscope('Aquarius')">♒ Aquarius</button>
-  <button onclick="showHoroscope('Pisces')">♓ Pisces</button>
+  <div id="horoscope-slider">
+  <button id="prev-btn">⟵</button>
+  <div id="slider-sign-name">Aries</div>
+  <button id="next-btn">⟶</button>
 </div>
+
+<div id="horoscope-box">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Zodiac_Wheel.svg/1024px-Zodiac_Wheel.svg.png" alt="Zodiac" id="horoscope-img">
+  <div id="horoscope-output"></div>
+</div>
+
 
 <div id="horoscope-box">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Zodiac_Wheel.svg/1024px-Zodiac_Wheel.svg.png" alt="Zodiac" id="horoscope-img">
