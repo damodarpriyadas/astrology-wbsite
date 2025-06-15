@@ -2,6 +2,7 @@ console.log("AstroVision is ready!");
 alert("Welcome to AstroVision 🌟");
 function showHoroscope(sign) {
   fetch(`https://corsproxy.io/?https://aztro.sameerkumar.website/?sign=${sign}&day=today`, {
+
     method: 'POST'
   })
   .then(response => response.json())
